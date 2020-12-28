@@ -19,6 +19,3 @@ def team_names
     team.text
   end
 end
-
-puts team_links[2]
-puts team_names[2]
