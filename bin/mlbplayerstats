@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/mlb_player_stats'
+
+MlbPlayerStats::CLI.new.call
