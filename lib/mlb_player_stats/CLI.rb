@@ -1,21 +1,24 @@
 class MlbPlayerStats::CLI
 
   def call
-    puts "\nWelcome to MlbPlayerStats!\n"
+    puts "\nWelcome to MlbPlayerStats!
+    \n"
     get_teams
     list_teams
     get_user_team
   end
 
   def get_teams
-    #scraper method to pull team names
+    MlbPlayerStats::Team.new("Atlanta Braves")
+    MlbPlayerStats::Team.new("Arizona Diamondbacks")
     @teams = MlbPlayerStats::Team.all
   end
 
   def list_teams
-    puts "Select the number associated with the team you'd like to view:"
+    puts "Select the number associated with the team you'd like to view:
+    \n"
     @teams.each.with_index(1) do |team, index|
-      puts "#{index}. #{team}"
+      puts "#{index}. #{team.name}"
     end
   end
 
@@ -30,7 +33,7 @@ class MlbPlayerStats::CLI
 
   def display_team(chosen_team)
     team = @teams[chosen_team - 1]
-    puts "Here are players on the 40-man-roster for #{team}:"
+    puts "Here are players on the 40-man-roster for #{team.name}:"
     ## To implement:
     # MlbPlayerStats::Player.all.each.with_index(1) do |player|
     #   puts player.name

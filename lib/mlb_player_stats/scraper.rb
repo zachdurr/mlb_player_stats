@@ -1,5 +1,4 @@
-require 'open-uri'
-require 'nokogiri'
+class MlbPlayerStats::Scraper
 
 site = "https://www.baseball-reference.com/"
 
@@ -25,3 +24,4 @@ player_list = team_page.css(".grouplist").css("li").map(&:text)
 
 puts player_list
 puts team_names
+end
