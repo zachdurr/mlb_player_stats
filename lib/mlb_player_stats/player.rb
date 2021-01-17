@@ -1,0 +1,3 @@
+class MlbPlayerStats::Player
+
+end

@@ -9,7 +9,7 @@ class MlbPlayerStats::CLI
 
   def get_teams
     #scraper method to pull team names
-    @teams = ["Atlanta Braves", "Arizona Diamondbacks", "Baltimore Orioles"]
+    @teams = MlbPlayerStats::Team.all
   end
 
   def list_teams
@@ -31,6 +31,10 @@ class MlbPlayerStats::CLI
   def display_team(chosen_team)
     team = @teams[chosen_team - 1]
     puts "Here are players on the 40-man-roster for #{team}:"
-
+    ## To implement:
+    # MlbPlayerStats::Player.all.each.with_index(1) do |player|
+    #   puts player.name
+    # end
+    # get_user_player
   end
 end
