@@ -2,7 +2,7 @@ class MlbPlayerStats::Team
   @@all = []
   # ["Atlanta Braves", "Arizona Diamondbacks", "Baltimore Orioles"]
 
-  attr_accessor :name
+  attr_accessor :name, :link
 
   def initialize(name)
     @name = name
@@ -10,6 +10,7 @@ class MlbPlayerStats::Team
   end
 
   def self.all
+    MlbPlayerStats::Scraper.scrape_teams if @@all.empty?
     @@all
   end
 
