@@ -26,6 +26,11 @@ class MlbPlayerStats::Scraper
   def scrape_players(team_link)
     doc = Nokogiri::HTML(open(@site + team_link))
     player_list = doc.css(".grouplist").css("li").map(&:text)
+    player_list.each do |player|
+      name = player
+      team = doc.css("span")[6].text
+      MlbPlayerStats::Player.new(name, team)
+    end
   end
 
   def run

@@ -20,6 +20,18 @@ class MlbPlayerStats::Team
     @@all << self
   end
 
+  # def add_players(arr)
+  #   arr.each do |player|
+  #     @players << player unless @players.include?(player)
+  #     if player.team == nil
+  #       player.team = self
+  #     elsif player.name == nil
+  #       player.name = player
+  #     end
+  #     MlbPlayerStats::Player.new(name, team)
+  #   end
+  # end
+
   def players
     MlbPlayerStats::Player.all << @players unless @players.include?(self)
     @players
