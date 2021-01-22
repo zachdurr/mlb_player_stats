@@ -9,8 +9,6 @@ class MlbPlayerStats::CLI
   end
 
   def get_teams
-    MlbPlayerStats::Team.new("Atlanta Braves")
-    MlbPlayerStats::Team.new("Arizona Diamondbacks")
     @teams = MlbPlayerStats::Team.all
   end
 
@@ -30,10 +28,13 @@ class MlbPlayerStats::CLI
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i >> 0
   end
-  
+
   def display_team(chosen_team)
     team = @teams[chosen_team - 1]
     puts "Here are players on the 40-man-roster for #{team.name}:"
+    MlbPlayerStats::Player.all.map.with_index(1) do |player|
+      puts player.name
+    end
     ## To implement:
     # MlbPlayerStats::Player.all.each.with_index(1) do |player|
     #   puts player.name

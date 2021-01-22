@@ -16,14 +16,16 @@ class MlbPlayerStats::Scraper
     end
   end
 
-  def scrape_teams
-    @teams.map do |team|
-      team.text
+  def team_names
+    @teams.map.with_index(1) do |team|
+      name = team.text
+    MlbPlayerStats::Team.new(name)
     end
   end
 
-  def team_page
-    team_page = Nokogiri::HTML(open(@site + team_links[4]))
+  def team_page(chosen_team)
+    team_page = Nokogiri::HTML(open(@site + team_links[chosen_team]))
+
   end
 
 
@@ -31,7 +33,8 @@ class MlbPlayerStats::Scraper
     team_links
     player_list = team_page.css(".grouplist").css("li").map(&:text)
     puts 'hello'
-    puts scrape_teams
+    puts team_names
     puts player_list
   end
+
 end
