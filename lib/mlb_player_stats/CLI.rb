@@ -31,10 +31,13 @@ class MlbPlayerStats::CLI
 
   def display_team(chosen_team)
     team = @teams[chosen_team - 1]
+    team_link = MlbPlayerStats::Scraper.new.team_links[chosen_team - 1]
+    team.players = MlbPlayerStats::Scraper.new.scrape_players(team_link)
     puts "Here are players on the 40-man-roster for #{team.name}:"
-    MlbPlayerStats::Player.all.map.with_index(1) do |player|
-      puts player.name
+    team.players.map.with_index(1) do |player, index|
+      puts "#{index}. #{player}"
     end
+    binding.pry
     ## To implement:
     # MlbPlayerStats::Player.all.each.with_index(1) do |player|
     #   puts player.name

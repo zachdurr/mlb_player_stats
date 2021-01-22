@@ -1,15 +1,16 @@
 class MlbPlayerStats::Player
   @@all = []
 
-  attr_accessor :name, :link, :team
+  attr_accessor :name, :team, :position
 
-  def initialize(name)
+  def initialize(name, team)
     @name = name
+    @team = MlbPlayerStats::Team.new(team) unless MlbPlayerStats::Team.all.include?(team)
+    add_to_team
     save
   end
 
   def self.all
-    MlbPlayerStats::Scraper.new.team_page if @@all.empty?
     @@all
   end
 
@@ -17,5 +18,8 @@ class MlbPlayerStats::Player
     @@all << self
   end
 
+  def add_to_team
+    @team.players << self unless @team.players.include?(self)
+  end
 
 end
