@@ -5,7 +5,7 @@ class MlbPlayerStats::Player
 
   def initialize(name, team)
     @name = name
-    @team = MlbPlayerStats::Team.new(team) unless MlbPlayerStats::Team.all.include?(team)
+    @team = team
   end
 
   def self.all
@@ -21,10 +21,6 @@ class MlbPlayerStats::Player
       @name = a
       save
     end
-  end
-
-  def add_to_team
-    @team.players << self unless @team.players.include?(self)
   end
 
 
