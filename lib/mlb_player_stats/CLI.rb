@@ -3,6 +3,7 @@ class MlbPlayerStats::CLI
   def call
     puts "\nWelcome to MlbPlayerStats!
     \n"
+    puts "To quit, type 'exit'."
     get_teams
     list_teams
     get_user_team
@@ -21,23 +22,30 @@ class MlbPlayerStats::CLI
   end
 
   def get_user_team
-    chosen_team = gets.strip.to_i
-    display_team(chosen_team) if valid_input(chosen_team, @teams)
+      chosen_team = gets.strip
+      index = (chosen_team.to_i - 1)
+      if chosen_team != "exit"
+        display_team(index) if valid_input(index, @teams)
+      end
+      if valid_input(index, @teams) == false
+        list_teams
+        get_user_team
+      end
   end
 
   def valid_input(input, data)
-    input.to_i <= data.length && input.to_i >> 0
+    input <= data.length && input > 0
   end
 
-  def display_team(chosen_team)
-    team = @teams[chosen_team - 1]
-    team_link = MlbPlayerStats::Scraper.new.team_links[chosen_team - 1]
+  def display_team(index)
+    team = @teams[index - 1]
+    team_link = MlbPlayerStats::Scraper.new.team_links[index - 1]
     team.players = MlbPlayerStats::Scraper.new.scrape_players(team_link)
     # MlbPlayerStats::Team.new(team).add_players(team.players)
     team.players.each do |player|
       name = player
-      team = @teams[chosen_team - 1]
-      MlbPlayerStats::Player.new(name, team)
+      team = @teams[index - 1]
+      MlbPlayerStats::Player.new(name, team).import_from_array(team.players)
     end
     puts "Here are players on the 40-man-roster for #{team.name}:"
     team.players.map.with_index(1) do |player, index|

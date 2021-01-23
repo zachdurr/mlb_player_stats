@@ -1,12 +1,11 @@
 class MlbPlayerStats::Player
   @@all = []
 
-  attr_accessor :name, :team, :position
+  attr_accessor :name, :team, :position, :stats
 
   def initialize(name, team)
     @name = name
     @team = MlbPlayerStats::Team.new(team) unless MlbPlayerStats::Team.all.include?(team)
-    save
   end
 
   def self.all
@@ -17,10 +16,9 @@ class MlbPlayerStats::Player
     @@all << self
   end
 
-  def self.import_from_array(arr)
+  def import_from_array(arr)
     arr.each do |a|
       @name = a
-      @team = a.team
       save
     end
   end
