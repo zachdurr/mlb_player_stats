@@ -45,7 +45,25 @@ class MlbPlayerStats::CLI
     team.players.map.with_index(1) do |player, index|
       puts "#{index}. #{player.name}"
     end
-    binding.pry
+    repeat
+  end
+
+  def repeat
+    puts "Would you like to see another roster? Y/N"
+    input = gets.strip
+      case input
+        when "Y"
+          call
+        when "y"
+          call
+        when "N"
+          puts "Thanks for chosing MlbPlayerStats! Hope to see you again!"
+        when "n"
+        puts "Thanks for chosing MlbPlayerStats! Hope to see you again!"
+        else
+        puts "Please select a valid response."
+        repeat
+      end
   end
 
   ## To implement:
