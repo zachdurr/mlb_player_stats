@@ -3,9 +3,9 @@ class MlbPlayerStats::CLI
   def call
     puts "\nWelcome to MlbPlayerStats!
     \n"
-    puts "To quit, type 'exit'."
     get_teams
     list_teams
+    puts "To quit, type 'exit'."
     get_user_team
   end
 
@@ -22,17 +22,18 @@ class MlbPlayerStats::CLI
   end
 
   def get_user_team
-      chosen_team = gets.strip
-      index = (chosen_team.to_i - 1)
-      case chosen_team
-        when "exit"
-          puts "Thanks for stopping by!"
-        when valid_input(index, @teams)
-        display_team(index)
-        when valid_input(index, @teams) == false
+    chosen_team = gets.strip
+    index = (chosen_team.to_i - 1)
+      if chosen_team == "exit"
+        puts "Thanks for stopping by!"
+      elsif valid_input(index, @teams) == false
+        puts "\nPlease enter a valid input.\n\n"
         list_teams
         get_user_team
+      else
+        display_team(index) if valid_input(index, @teams)
       end
+    repeat
   end
 
   def valid_input(input, data)
@@ -51,7 +52,6 @@ class MlbPlayerStats::CLI
     # chosen_player = gets.strip
     # player_index = (chosen_player.to_i - 1)
     # MlbPlayerStats::Scraper.new.display_player_stats(team_link, team.players[player_index]) if valid_input(player_index, team.players)
-    repeat
   end
 
 
@@ -59,7 +59,7 @@ class MlbPlayerStats::CLI
     puts "Would you like to see another roster? Y/N"
     input = gets.strip
       case input
-        when "Y"
+        when "Y" || "y"
           call
         when "y"
           call
