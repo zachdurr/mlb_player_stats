@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-28T21:09:15.271Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="_JCJPH1JjReNp38Zx4Mn" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-24T00:17:34.171Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="UN2lquRSIV9fl9nZVkqE" version="14.1.8" type="github">
   <diagram name="Page-1" id="c7488fd3-1785-93aa-aadb-54a6760d102a">
-    <mxGraphModel dx="1024" dy="1367" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="1414" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -27,12 +27,6 @@
         <mxCell id="rDEwq_Y4c4YehVas0zgF-23" value="User enters number associated with team" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
           <mxGeometry x="230" y="56.49999999999997" width="70" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-27" value="Prints out numbered list of years from team to select" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
-          <mxGeometry x="320" y="56.49999999999997" width="70" height="37" as="geometry" />
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-38" value="Prints out numbered list of players from year to select" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
-          <mxGeometry x="520" y="56.49999999999997" width="70" height="37" as="geometry" />
-        </mxCell>
         <mxCell id="rDEwq_Y4c4YehVas0zgF-42" value="" style="endArrow=classic;html=1;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="2b4e8129b02d487f-2" source="2b4e8129b02d487f-6" target="rDEwq_Y4c4YehVas0zgF-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="360" y="56.5" as="sourcePoint" />
@@ -43,23 +37,20 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-1" value="User enters number associated with selected player" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="2b4e8129b02d487f-2">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-1" value="User enters number associated with selected player" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
           <mxGeometry x="620" y="56.49999999999997" width="70" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-2" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="2b4e8129b02d487f-2" target="ZKz_PeMd2FncZHEh645d-1">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-2" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" target="ZKz_PeMd2FncZHEh645d-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="654" y="-50" as="sourcePoint" />
             <mxPoint x="654" y="50" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="2b4e8129b02d487f-2" source="ZKz_PeMd2FncZHEh645d-1">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-2" source="ZKz_PeMd2FncZHEh645d-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="177" as="sourcePoint" />
             <mxPoint x="655" y="353.5" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-28" value="User enters year&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-2" vertex="1">
-          <mxGeometry x="420" y="56.49999999999997" width="70" height="37" as="geometry" />
         </mxCell>
         <mxCell id="2b4e8129b02d487f-3" value="MLBTeam Class&lt;br&gt;" style="swimlane;html=1;startSize=20;horizontal=0;" parent="2b4e8129b02d487f-1" vertex="1">
           <mxGeometry y="170" width="920" height="150" as="geometry" />
@@ -67,31 +58,16 @@
         <mxCell id="2b4e8129b02d487f-12" value="MLB Teams/Links are created and stored" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-3" vertex="1">
           <mxGeometry x="135" y="49.99999999999996" width="70" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="2b4e8129b02d487f-14" value="Retrieve years from team links" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-3" vertex="1">
-          <mxGeometry x="230" y="50.00000000000003" width="70" height="37" as="geometry" />
-        </mxCell>
         <mxCell id="2b4e8129b02d487f-4" value="MLBPlayer Class" style="swimlane;html=1;startSize=20;horizontal=0;" parent="2b4e8129b02d487f-1" vertex="1">
           <mxGeometry y="320" width="920" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-33" value="Retrieve players from selected year" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-4" vertex="1">
-          <mxGeometry x="420" y="56.5" width="70" height="37" as="geometry" />
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-34" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-4" target="rDEwq_Y4c4YehVas0zgF-38" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="490" y="76" as="sourcePoint" />
-            <mxPoint x="535" y="-200" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="555" y="76" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-4" value="Prints out stats from selected player" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="2b4e8129b02d487f-4">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-4" value="Prints out stats from selected player" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-4" vertex="1">
           <mxGeometry x="720" y="-243.50000000000003" width="70" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-5" value="Retrieve players from selected year" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" vertex="1" parent="2b4e8129b02d487f-4">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-5" value="Retrieve players from selected year" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-4" vertex="1">
           <mxGeometry x="620" y="56.5" width="70" height="37" as="geometry" />
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-6" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="2b4e8129b02d487f-4" target="ZKz_PeMd2FncZHEh645d-4">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-6" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-4" target="ZKz_PeMd2FncZHEh645d-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="690" y="76" as="sourcePoint" />
             <mxPoint x="555" y="-580" as="targetPoint" />
@@ -100,10 +76,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-7" value="User decides next action" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2b4e8129b02d487f-4">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-7" value="User decides next action" style="rounded=1;whiteSpace=wrap;html=1;" parent="2b4e8129b02d487f-4" vertex="1">
           <mxGeometry x="772" y="-397" width="88" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-8" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.414;exitY=-0.014;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="2b4e8129b02d487f-4" source="ZKz_PeMd2FncZHEh645d-4" target="ZKz_PeMd2FncZHEh645d-7">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-8" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.414;exitY=-0.014;exitDx=0;exitDy=0;exitPerimeter=0;" parent="2b4e8129b02d487f-4" source="ZKz_PeMd2FncZHEh645d-4" target="ZKz_PeMd2FncZHEh645d-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="750" y="-250" as="sourcePoint" />
             <mxPoint x="750" y="-370" as="targetPoint" />
@@ -111,6 +87,9 @@
               <mxPoint x="750" y="-370" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rDEwq_Y4c4YehVas0zgF-33" value="Retrieve players from selected team" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="2b4e8129b02d487f-4" vertex="1">
+          <mxGeometry x="230" y="56.5" width="70" height="37" as="geometry" />
         </mxCell>
         <mxCell id="2b4e8129b02d487f-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startArrow=none;startFill=0;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="2b4e8129b02d487f-1" source="2b4e8129b02d487f-12" target="2b4e8129b02d487f-6" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -139,25 +118,10 @@
             <mxPoint x="65" y="524" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-25" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-1" source="rDEwq_Y4c4YehVas0zgF-23" target="2b4e8129b02d487f-14" edge="1">
+        <mxCell id="rDEwq_Y4c4YehVas0zgF-25" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-1" source="rDEwq_Y4c4YehVas0zgF-23" target="rDEwq_Y4c4YehVas0zgF-33" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="320" y="300" as="sourcePoint" />
-            <mxPoint x="370" y="250" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-26" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-1" source="2b4e8129b02d487f-14" target="rDEwq_Y4c4YehVas0zgF-27" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320" y="310" as="sourcePoint" />
-            <mxPoint x="340" y="120" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="355" y="239" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-32" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="2b4e8129b02d487f-1" source="rDEwq_Y4c4YehVas0zgF-28" target="rDEwq_Y4c4YehVas0zgF-33" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="320" y="200" as="sourcePoint" />
-            <mxPoint x="455" y="380" as="targetPoint" />
+            <mxPoint x="265" y="220" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="rDEwq_Y4c4YehVas0zgF-11" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
@@ -194,37 +158,10 @@
             <mxPoint x="444" y="145.98199999999997" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-29" value="User decides next action" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="562" y="-17" width="88" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-30" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="rDEwq_Y4c4YehVas0zgF-29" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="540" y="146.5" as="sourcePoint" />
-            <mxPoint x="540" y="10" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="540" y="10" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-31" value="" style="endArrow=classic;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="634" y="33" as="sourcePoint" />
-            <mxPoint x="634" y="140" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="rDEwq_Y4c4YehVas0zgF-40" value="User decides next action" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="752" y="-17" width="88" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rDEwq_Y4c4YehVas0zgF-41" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.414;exitY=-0.014;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="rDEwq_Y4c4YehVas0zgF-40" edge="1" source="rDEwq_Y4c4YehVas0zgF-38">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="730" y="130" as="sourcePoint" />
-            <mxPoint x="730" y="10" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="730" y="10" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ZKz_PeMd2FncZHEh645d-9" value="" style="curved=1;endArrow=classic;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="rDEwq_Y4c4YehVas0zgF-18">
+        <mxCell id="ZKz_PeMd2FncZHEh645d-9" value="" style="curved=1;endArrow=classic;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="rDEwq_Y4c4YehVas0zgF-18" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1080" y="220" as="sourcePoint" />
             <mxPoint x="1130" y="170" as="targetPoint" />
