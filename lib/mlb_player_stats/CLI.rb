@@ -45,8 +45,13 @@ class MlbPlayerStats::CLI
     team.players.map.with_index(1) do |player, index|
       puts "#{index}. #{player.name}"
     end
+    # puts "Please select the number associated with the Player who's stats you'd like to view."
+    # chosen_player = gets.strip
+    # player_index = (chosen_player.to_i - 1)
+    # MlbPlayerStats::Scraper.new.display_player_stats(team_link, team.players[player_index]) if valid_input(player_index, team.players)
     repeat
   end
+
 
   def repeat
     puts "Would you like to see another roster? Y/N"
@@ -66,6 +71,4 @@ class MlbPlayerStats::CLI
       end
   end
 
-  ## To implement:
-  # get_user_player
 end

@@ -33,4 +33,10 @@ class MlbPlayerStats::Scraper
     end
   end
 
+  # def display_player_stats(team_link, player)
+  #   doc = Nokogiri::HTML(open(@site + team_link))
+  #   team_stats = doc.css("a")["href"]
+  #
+  #   binding.pry
+  # end
 end

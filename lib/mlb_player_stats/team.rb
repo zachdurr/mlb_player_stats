@@ -5,7 +5,7 @@ class MlbPlayerStats::Team
   attr_accessor :name, :link, :players
   attr_writer :players
 
-  def initialize(name)
+  def initialize(name, url=nil)
     @name = name
     @players = []
     save
