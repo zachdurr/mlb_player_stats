@@ -1,6 +1,6 @@
-# MlbPlayerStats
+# MlbPlayerList
 
-See your favorite MLB Player's stats!
+See your favorite MLB Team's players! Select your favorite team and see the current list of players on the 40 person roster.
 
 ## Installation
 
