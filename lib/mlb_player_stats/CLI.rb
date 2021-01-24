@@ -24,10 +24,12 @@ class MlbPlayerStats::CLI
   def get_user_team
       chosen_team = gets.strip
       index = (chosen_team.to_i - 1)
-      if chosen_team != "exit"
-        display_team(index) if valid_input(index, @teams)
-      end
-      if valid_input(index, @teams) == false
+      case chosen_team
+        when "exit"
+          puts "Thanks for stopping by!"
+        when valid_input(index, @teams)
+        display_team(index)
+        when valid_input(index, @teams) == false
         list_teams
         get_user_team
       end
