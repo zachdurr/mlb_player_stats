@@ -13,6 +13,11 @@ class MlbPlayerStats::CLI
     @teams = MlbPlayerStats::Team.all
   end
 
+  def get_teams_again
+    @repeat_teams = MlbPlayerStats::Scraper.new.repeat_team_names
+  end
+
+
   def list_teams
     puts "Select the number associated with the team you'd like to view:
     \n"
@@ -57,7 +62,7 @@ class MlbPlayerStats::CLI
   end
 
   def call_sequence
-    list_teams
+    get_teams_again
     puts "To quit, type 'exit'."
     get_user_team
   end
@@ -77,7 +82,7 @@ class MlbPlayerStats::CLI
         puts "Thanks for chosing MlbPlayerStats! Hope to see you again!"
         else
         puts "Please select a valid response."
-        repeat
+        call_sequence
       end
   end
 

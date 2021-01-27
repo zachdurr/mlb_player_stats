@@ -18,10 +18,18 @@ class MlbPlayerStats::Scraper
 
   def team_names
     @teams.map.with_index(1) do |team|
-      name = team.text
-    MlbPlayerStats::Team.new(name)
+      name = team.text 
+    MlbPlayerStats::Team.new(name) 
     end
   end
+
+  def repeat_team_names
+    @teams.map.with_index(1) do |team, index|
+      name = team.text
+      puts "#{index}. #{name}"
+    end
+  end
+
 
   def scrape_players(team_link)
     doc = Nokogiri::HTML(open(@site + team_link))
