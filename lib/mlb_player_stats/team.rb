@@ -17,7 +17,7 @@ class MlbPlayerStats::Team
   end
 
   def save
-    @@all << self
+    @@all << self unless @@all.include?(self)
   end
 
   def add_players(arr)

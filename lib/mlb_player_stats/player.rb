@@ -1,11 +1,12 @@
 class MlbPlayerStats::Player
   @@all = []
 
-  attr_accessor :name, :team, :position, :stats
+  attr_accessor :name, :team, :url, :position, :stats
 
   def initialize(name, team)
     @name = name
     @team = team
+    save
   end
 
   def self.all
