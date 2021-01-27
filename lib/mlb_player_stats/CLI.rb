@@ -30,7 +30,7 @@ class MlbPlayerStats::CLI
     chosen_team = gets.strip
     index = (chosen_team.to_i - 1)
       if chosen_team == "exit"
-        puts "Thanks for stopping by!"
+        puts "\nThanks for stopping by!\n"
       elsif valid_input(index, @teams) == false
         puts "\nPlease enter a valid input.\n\n"
         list_teams
@@ -53,7 +53,7 @@ class MlbPlayerStats::CLI
    
     
     team.players.map.with_index(1) do |player, index|
-      puts "#{index}. #{player.name}"
+      puts "#{index}. #{player}"
     end
     # puts "Please select the number associated with the Player who's stats you'd like to view."
     # chosen_player = gets.strip
@@ -82,7 +82,9 @@ class MlbPlayerStats::CLI
         puts "Thanks for chosing MlbPlayerStats! Hope to see you again!"
         else
         puts "Please select a valid response."
-        call_sequence
+        MlbPlayerStats::Scraper.new.repeat_team_names
+        puts "To quit, type 'exit'."
+        get_user_team
       end
   end
 

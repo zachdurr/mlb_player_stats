@@ -24,15 +24,25 @@ class MlbPlayerStats::Team
     @players
   end
 
-  # def add_players(arr)
-  #   arr.each do |player|
-  #     @players << player unless @players.include?(player)
-  #     # MlbPlayerStats::Player.new(name, self)
-  #     # if player.team == nil
-  #     #   player.team = self
-  #     # elsif player.name == nil
-  #     #   player.name = player
-  #     # end
-  #   end
-  # end
+  def add_players(player_arr)
+    player_arr.each do |player|
+      new_player = MlbPlayerStats::Player.new(player, self)
+      @players << new_player unless @players.include?(new_player)
+      if new_player.team == nil
+        new_player.team = self
+      elsif new_player.name == nil
+        new_player.name = player
+      end
+    end
+  end
+
+  def add_players_url(url_arr)
+    MlbPlayerStats::Player.all.each do |player|
+      index =+ 0
+      player.url = url_arr[index] unless player.url =! nil
+    end
+  end
+
+
+
 end
