@@ -50,6 +50,10 @@ class MlbPlayerStats::Scraper
     stat_categories = doc.css(".p1").css("h4").map(&:text)
     statistics = doc.css(".p1").css("p").map(&:text)
     current_year = doc.css(".stats_pullout").css("p").first.text
+    position = doc.css(".players").css("p").first.text.strip.split("\n")[1].strip
+    dob = doc.css(".players").css("p").map(&:text)[4].strip.split("\n")[2].strip
+    puts "\nDate of Birth: #{dob}\n\n"
+    puts "\nPosition: #{position}\n\n"
     puts "#{current_year} Statistics:"
     puts "-------------------"
     puts "#{stat_categories[0]} | #{stat_categories[1]} | #{stat_categories[2]} | #{stat_categories[3]}"
@@ -60,11 +64,5 @@ class MlbPlayerStats::Scraper
     puts "#{statistics[1]} | #{statistics[3]} | #{statistics[5]} | #{statistics[7]}"
     # statistics are listed by year and career. the first item in the array will be the current year stats and the second will be the career stats
   end
-
-
-  # def display_player_stats(team_link, player)
-  #   doc = Nokogiri::HTML(open(@site + team_link))
-  #   team_stats = doc.css("a")["href"]
-  # end
 
 end

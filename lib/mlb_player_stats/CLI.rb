@@ -58,6 +58,7 @@ class MlbPlayerStats::CLI
     puts "Please select the number associated with the Player who's stats you'd like to view."
     chosen_player = gets.strip
     player_index = (chosen_player.to_i - 1)
+    puts "\n\nShowing selected stats for #{team.players[player_index].name}:\n\n"
     MlbPlayerStats::Scraper.new.scrape_player_stats(team.players[player_index].url) if valid_input(player_index, team.players)
   end
 

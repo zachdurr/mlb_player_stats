@@ -25,7 +25,7 @@ class MlbPlayerStats::Team
   end
 
   def add_players(player_arr, url_arr)
-    index = 0
+    index = -1
     player_arr.each do |player|
       index += 1
       new_player = MlbPlayerStats::Player.new(player, self)
