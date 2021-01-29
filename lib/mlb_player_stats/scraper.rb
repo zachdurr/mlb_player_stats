@@ -36,11 +36,13 @@ class MlbPlayerStats::Scraper
     player_list = doc.css(".grouplist").css("li").map(&:text)
     team = MlbPlayerStats::Team.new(doc.css("span")[6].text)
     player_urls = doc.css(".grouplist").css("li").css("a").map {|x| x["href"]}
-    add_players = team.add_players(player_list)
+    add_players = team.add_players(player_list, player_urls)
     # team.add_players_url(player_urls)
     players = player_list.map do |player|
       name = player
     end
+    team.players
+    # binding.pry
   end
 
   def scrape_player_stats(player_link)
@@ -48,23 +50,21 @@ class MlbPlayerStats::Scraper
     stat_categories = doc.css(".p1").css("h4").map(&:text)
     statistics = doc.css(".p1").css("p").map(&:text)
     current_year = doc.css(".stats_pullout").css("p").first.text
-    # statistics are listed by year and career. the first item in the array will be the current year stats and the second will be the career stats
-  end
-    
-  def display_stats
     puts "#{current_year} Statistics:"
+    puts "-------------------"
     puts "#{stat_categories[0]} | #{stat_categories[1]} | #{stat_categories[2]} | #{stat_categories[3]}"
     puts "#{statistics[0]} | #{statistics[2]} | #{statistics[4]} | #{statistics[6]}"
     puts "Career Statistics:"
+    puts "-------------------"
     puts "#{stat_categories[0]} | #{stat_categories[1]} | #{stat_categories[2]} | #{stat_categories[3]}"
     puts "#{statistics[1]} | #{statistics[3]} | #{statistics[5]} | #{statistics[7]}"
+    # statistics are listed by year and career. the first item in the array will be the current year stats and the second will be the career stats
   end
 
 
   # def display_player_stats(team_link, player)
   #   doc = Nokogiri::HTML(open(@site + team_link))
   #   team_stats = doc.css("a")["href"]
-  #
-  #   binding.pry
   # end
+
 end
