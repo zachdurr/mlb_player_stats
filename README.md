@@ -1,6 +1,6 @@
 # MlbPlayerList
 
-See your favorite MLB Team's players! Select your favorite team and see the current list of players on the 40 person roster.
+See your favorite MLB player's stats!! Select a team and see the current list of players on the 40 person roster. From there you will be able to select any player and see their stats.
 
 ## Installation
 
