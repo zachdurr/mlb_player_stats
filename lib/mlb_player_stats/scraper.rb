@@ -1,7 +1,3 @@
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
-
 class MlbPlayerStats::Scraper
 
   def initialize
@@ -45,15 +41,15 @@ class MlbPlayerStats::Scraper
     # binding.pry
   end
 
-  def scrape_player_stats(player_link)
-    doc = Nokogiri::HTML(open("https://www.baseball-reference.com/" + player_link))
+  def scrape_player_stats(player)
+    doc = Nokogiri::HTML(open("https://www.baseball-reference.com/" + player.url))
     stat_categories = doc.css(".p1").css("h4").map(&:text)
     statistics = doc.css(".p1").css("p").map(&:text)
     current_year = doc.css(".stats_pullout").css("p").first.text
-    position = doc.css(".players").css("p").first.text.strip.split("\n")[1].strip
-    dob = doc.css(".players").css("p").map(&:text)[4].strip.split("\n")[2].strip
-    puts "\nDate of Birth: #{dob}\n\n"
-    puts "\nPosition: #{position}\n\n"
+    player.position = doc.css(".players").css("p").first.text.strip.split("\n")[1].strip
+    player.dob = doc.css(".players").css("p").map(&:text)[4].strip.split("\n")[2].strip
+    puts "\nDate of Birth: #{player.dob}\n\n"
+    puts "\nPosition: #{player.position}\n\n"
     puts "#{current_year} Statistics:"
     puts "-------------------"
     puts "#{stat_categories[0]} | #{stat_categories[1]} | #{stat_categories[2]} | #{stat_categories[3]}"

@@ -25,9 +25,7 @@ class MlbPlayerStats::Team
   end
 
   def add_players(player_arr, url_arr)
-    index = -1
-    player_arr.each do |player|
-      index += 1
+    player_arr.each.with_index(0) do |player, index|
       new_player = MlbPlayerStats::Player.new(player, self)
       @players << new_player unless @players.include?(new_player)
       if new_player.team == nil
